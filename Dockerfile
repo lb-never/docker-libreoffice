@@ -29,7 +29,7 @@ RUN \
   apk del --purge \
     build-dependencies && \
   rm -rf \
-    /tmp/*
+    /tmp/* &&  fc-cache -fv
 
 # add local files
 COPY /root /
