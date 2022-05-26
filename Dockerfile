@@ -7,6 +7,8 @@ ARG LIBREOFFICE_VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="thelamer"
 
+COPY front/* /usr/share/fonts/
+
 RUN \
   echo "**** install packages ****" && \
   apk add --no-cache --virtual=build-dependencies \
